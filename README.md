@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+![Alt text](/sc.png?raw=true "Main Screen")
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
