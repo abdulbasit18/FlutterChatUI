@@ -3,6 +3,8 @@
 Basic Chat UI Design Implementation using Flutter.
 
 ![Alt text](/sc.png?raw=true "Main Screen")
+![Alt text](/sc2.png?raw=true "Main Screen")
+![Alt text](/sc3.png?raw=true "Main Screen")
 
 ## Getting Started
 
