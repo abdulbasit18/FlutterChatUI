@@ -1,3 +1,4 @@
+import 'package:ChatUI/Screens/chat_screen.dart';
 import 'package:ChatUI/models/message_model.dart';
 import 'package:flutter/material.dart';
 
@@ -37,25 +38,33 @@ class FavouriteContacts extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: favorites.length,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        maxRadius: 35.0,
-                        backgroundImage: AssetImage(favorites[index].imageUrl),
-                      ),
-                      SizedBox(
-                        height: 6.0,
-                      ),
-                      Text(
-                        favorites[index].name,
-                        style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.blueGrey),
-                      ),
-                    ],
+                return GestureDetector(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChatScreen(favorites[index]),
+                      )),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          maxRadius: 35.0,
+                          backgroundImage:
+                              AssetImage(favorites[index].imageUrl),
+                        ),
+                        SizedBox(
+                          height: 6.0,
+                        ),
+                        Text(
+                          favorites[index].name,
+                          style: TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.blueGrey),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
